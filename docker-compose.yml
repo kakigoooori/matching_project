@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  web:
+    container_name: matching_pro_web
+    build: ./docker
+    ports:
+      - 1203:80
+    privileged: true
+    volumes:
+      - ./server:/var/www/html/public
+
+  db:
+    image: mysql:5.7
+    container_name: matching_project
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: docker-database
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      TZ: 'Asia/Tokyo'
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --innodb-use-native-aio=0
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/db/sql:/docker-entrypoint-initdb.d
+    ports:
+      - 1204:3306
+
+  phpmyadmin:
+    container_name: matching_pro
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=matching_project
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    ports:
+      - 1205:80
