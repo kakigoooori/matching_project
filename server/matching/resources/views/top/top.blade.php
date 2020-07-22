@@ -31,28 +31,6 @@
   </a>
 </div>
 
-
-
-
-<form method="get" action="/mypage">
-<input type="submit" value="会員の方はこちら" class="btn btn-primary">
-</form>
-<br>
-<form method="get" action="/login">
-<input type="submit" value="新規登録" class="btn btn-success">
-</form>
-<br>
-<form method="get" action="/pool">
-<input type="submit" value="投稿する" class="btn btn-danger">
-</form>
-<br>
-<form method="get" action="/search">
-<input type="submit" value="検索する" class="btn btn-warning">
-</form>
-<br>
-<form method="get" action="/login">
-<input type="submit" value="ログイン" class="btn btn-info">
-</form>
 <h1>topページだよ</h1>
 <p>
     aaaaaaaaaaaaaaaaaaaaaa<br>
