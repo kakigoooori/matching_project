@@ -40,7 +40,7 @@
                        
 @if(Auth::user()->image == null)
 <figure>
-<img src="/storage/images/base.jpg" width="150px" height="150px">
+<img src="{{ asset('base.jpg')}}" width="150px" height="150px">
 
 </figure>
 @else

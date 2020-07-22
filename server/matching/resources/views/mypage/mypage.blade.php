@@ -38,7 +38,7 @@
 
 @if(Auth::user()->image == null)
 <figure>
-<img src="/storage/images/base.jpg" width="100px" height="100px">
+<img src="{{ asset('base.jpg')}}" width="100px" height="100px">
 <figcaption>デフォルト画像です</figcaption>
 </figure>
 @else
@@ -47,6 +47,8 @@
 </figure>
 @endif
 
+マイページ上記のTABを推すことでマイページ上の他の機能を使うことができます。
+更なる機能は今後アップデートしていくのでお楽しみに！
 
 
 
