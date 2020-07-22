@@ -488,7 +488,7 @@ class BaseController extends Controller
               return redirect()->action('BaseController@getSearch');
             }
 
-            return view('Product/Product',compact('userdata','like'))->with(
+            return view('Product.Product',compact('userdata','like'))->with(
               'input', [
                 'work' => $Product_data->work,
                 'price' => $Product_data->price,
