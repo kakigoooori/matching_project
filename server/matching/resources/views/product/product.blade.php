@@ -69,7 +69,7 @@
     </form>
      </div>
   @endif
-  <p>　いいね数：{{ $like->users()->count() }}</p>
+  <p>いいね数：{{ $like->users()->count() }}</p>
   </td>
 
                     
@@ -110,16 +110,11 @@
     <a href="/mypage/chat/{{ $userdata[0]->id }}" class="btn btn-primary">メッセージを送信する</a>
     <tr>
     <td>
-    <form method="get" action=#>
+    <form method="get" action=/contact>
     <input type="submit" value="違反通告" class="btn btn-danger">
     </form>
     </td>
 
-    <td>
-    <form method="get" action=#>
-    <input type="submit" value="イイね！" class="btn btn-success">
-    </form>
-    </td>
     </tr>
     </table>
 
