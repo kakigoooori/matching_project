@@ -90,11 +90,16 @@
  <div class="col-sm-4 text-center">
     <div class="card">
       <h5>出品者プロフィール</h5>
+      @if( $userdata[0]->image  == NULL)
+       <figure>
+      <img src="{{ asset('/img/base.jpg')}}" width="100px" height="100px">
+      </figure>
+      @else
       <figure>
       <img src="/storage/images/{{ $userdata[0]->id }}.jpg" width="125px" height="125px">
-      <h5> 『{{ $userdata[0]->nickname }}』</h5>
       </figure>
-
+      @endif
+      <h5> 『{{ $userdata[0]->nickname }}』</h5>
     
       <P>出品者の一言</P>
 

@@ -530,7 +530,7 @@ class BaseController extends Controller
         Mail::to($sellmail)->send(new Receive($sellmail,$poolmail));
 
 
-        return view('Product/Product_check')->with('input', $request->all());
+        return view('product/product_check')->with('input', $request->all());
      
        }
 
@@ -553,6 +553,7 @@ class BaseController extends Controller
               'gender' => $Profile_data->gender,
               'note' => $Profile_data->note,
               'id' => $id,
+              'image' =>$Profile_data->image
             ]);
          
      }

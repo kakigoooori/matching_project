@@ -38,7 +38,7 @@
 
 @if(Auth::user()->image == null)
 <figure>
-<img src="{{ asset('base.jpg')}}" width="100px" height="100px">
+<img src="{{ asset('/img/base.jpg')}}" width="100px" height="100px">
 <figcaption>デフォルト画像です</figcaption>
 </figure>
 @else

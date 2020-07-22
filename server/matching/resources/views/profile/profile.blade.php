@@ -9,15 +9,20 @@
 <div class="card" >
 <br />
 <div class="card-header">
-<figure>
-      <img src="/storage/images/{{ $input['id'] }}.jpg" width="150px" height="150px">
+      @if( $input['image']  == NULL)
+       <figure>
+      <img src="{{ asset('/img/base.jpg')}}" width="125px" height="125px">
+      </figure>
+      @else
+      <figure>
+      <img src="/storage/images/{{ $input['id']  }}.jpg" width="125px" height="125px">
+      </figure>
+      @endif
       <h3> 『{{ $input['nickname'] }}』</h3>
-</figure>
 </div>
 
 <h5>所在地/{{ $input['area'] }}</h5>
 
-<!--画像表示-->
                        
 <div class="card-header">
 <h5>自己紹介コメント</h5>
