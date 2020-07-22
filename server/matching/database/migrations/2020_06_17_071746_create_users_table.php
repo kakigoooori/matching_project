@@ -19,10 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('nickname');
             $table->string('email');
-            $table->integer('gender');
+            $table->string('gender');
             $table->string('area');
-            $table->string('note');
-            $table->string('image');
+            $table->string('note')->nullable();
+            $table->string('image')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }
